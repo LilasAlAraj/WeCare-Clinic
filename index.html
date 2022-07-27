@@ -8,31 +8,56 @@
     <title>WeCare</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
 
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet" />
 
 </head>
 
 <body>
 
 
-    <header class="header">
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a href="#" class="logo"><i class="fas fa-heartbeat fa-1x" style="color: #6495ED;"></i> We Care.</a>
 
-        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> We Care. </a>
-
-        <nav class="navbar">
-            <a href="#home">الرئيسية</a>
-            <a href="#services">الخدمات</a>
-            <a href="#about">حول</a>
-            <a href="#doctors">الأطباء</a>
-            <a href="#book">احجز الآن</a>
-            <a href="#review">تقييمات</a>
-            <a href="#blogs">المدونة</a>
-        </nav>
-
-        <div id="menu-btn" class="fas fa-bars"></div>
-
-    </header>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main"
+                aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="main">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="#home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="#services">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="#about">حول</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="#doctors">الأطباء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="#book">احجز الآن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="#review">التقييمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="#blogs">المدونة</a>
+                    </li>
+                </ul>
+                <a href="" class="btn rounded-pill main-btn log" href="#">تسجيل الدخول</a>
+            </div>
+        </div>
+    </nav>
 
     <section class="home" id="home">
 
@@ -43,35 +68,73 @@
         <div class="content">
             <h3>ابقى آمناً، ابقى صحياً </h3>
             <p>وي كير، صحتكم معنا بخير</p>
-            <a href="#" class="btn">تواصل معنا<span class="fas fa-chevron-right"></span> </a>
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle " data-bs-toggle="dropdown" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    تواصل معنا
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="tel:+936114470164">اتصل بنا</a></li>
+                    <li><a class="dropdown-item" href="mailto:WecareClinic@gmail.com">أرسل بريد الكتروني</a></li>
+                </ul>
+            </div>
+
         </div>
 
     </section>
+
+
     <hr>
 
-    
-    <section class="icons-container">
+    <section>
 
-        <div class="icons">
-            <i class="fas fa-user-md"></i>
-            <h3>50+</h3>
-            <p> طبيب وممرض وفني</p>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner fa-5x">
+                <div class="carousel-item active">
+                    <img src="image/drs.jpg" class="d-block w-50" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>50+</h3>
+                        <p> طبيب وممرض وفني</p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="image/PATIENT.jpg" class="d-block w-50" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>1040+</h3>
+                        <p>مريض قد تعالج</p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="image/equipment.jpg" class="d-block w-50" alt="">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>50+</h3>
+                        <p>سرير مجهز</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-
-        <div class="icons">
-            <i class="fas fa-users"></i>
-            <h3>1040+</h3>
-            <p>مريض قد تعالج</p>
-        </div>
-
-        <div class="icons">
-            <i class="fas fa-procedures"></i>
-            <h3>50+</h3>
-            <p>سرير مجهز</p>
-        </div>
-
-
     </section>
+
+
     <hr>
 
     <section class="services" id="services">
@@ -81,42 +144,42 @@
         <div class="box-container">
 
             <div class="box">
-                <i class="fas fa-notes-medical"></i>
+                <i class="fas fa-notes-medical fa-10x" style="color: #6495ED;"></i>
                 <h3>فحص شامل</h3>
                 <p>أبجد هوز حطي كلمن سعفث قرشت</p>
                 <a href="#" class="btn"> تعرف المزيد <span class="fas fa-chevron-right"></span> </a>
             </div>
 
             <div class="box">
-                <i class="fas fa-ambulance"></i>
+                <i class="fas fa-ambulance fa-10x" style="color: #6495ED;"></i>
                 <h3>24/7 اسعاف</h3>
                 <p>أبجد هوز حطي كلمن سعفث قرشت</p>
                 <a href="#" class="btn"> تعرف المزيد <span class="fas fa-chevron-right"></span> </a>
             </div>
 
             <div class="box">
-                <i class="fas fa-user-md"></i>
+                <i class="fas fa-user-md fa-10x" style="color: #6495ED;"></i>
                 <h3>أطباء خبراء</h3>
                 <p>أبجد هوز حطي كلمن سعفث قرشت</p>
                 <a href="#" class="btn"> تعرف المزيد <span class="fas fa-chevron-right"></span> </a>
             </div>
 
             <div class="box">
-                <i class="fas fa-pills"></i>
+                <i class="fas fa-pills fa-10x" style="color: #6495ED;"></i>
                 <h3>أدوية</h3>
                 <p>أبجد هوز حطي كلمن سعفث قرشت</p>
                 <a href="#" class="btn"> تعرف المزيد <span class="fas fa-chevron-right"></span> </a>
             </div>
 
             <div class="box">
-                <i class="fas fa-procedures"></i>
+                <i class="fas fa-procedures fa-10x" style="color: #6495ED;"></i>
                 <h3>تجهيزات سريرية</h3>
                 <p>أبجد هوز حطي كلمن سعفث قرشت</p>
                 <a href="#" class="btn"> تعرف المزيد <span class="fas fa-chevron-right"></span> </a>
             </div>
 
             <div class="box">
-                <i class="fas fa-heartbeat"></i>
+                <i class="fas fa-heartbeat fa-10x" style="color: #6495ED;"></i>
                 <h3>رعاية كاملة</h3>
                 <p>أبجد هوز حطي كلمن سعفث قرشت</p>
                 <a href="#" class="btn"> تعرف المزيد <span class="fas fa-chevron-right"></span> </a>
@@ -158,79 +221,101 @@
 
     <section class="doctors" id="doctors">
 
-        <h1 class="heading"> <span>أطباءنا</span> </h1>
+        <h1 class="heading"> <span>أطباؤنا</span> </h1>
 
         <div class="box-container">
 
-            <div class="box">
-                <img src="image/dr.png" alt="">
-                <h3>إيمان المصري</h3>
-                <span>اختصاص عينية</span>
-                <div class="share">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                    <a href="#" class="fab fa-linkedin"></a>
+            <div class="card" style="width: 18rem;">
+                <img src="image/dr.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">إيمان المصري</h3>
+
+                    <span class="card-text">اختصاص عينية</span>
+
+                    <div class="share fa-3x" style="color: #6495ED;">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="box">
-                <img src="image/dr.png" alt="">
-                <h3>مرح الأعرج</h3>
-                <span>اختصاص جلدية</span>
-                <div class="share">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                    <a href="#" class="fab fa-linkedin"></a>
+            <div class="card" style="width: 18rem;">
+                <img src="image/dr.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">مرح الأعرج</h3>
+
+                    <span class="card-text">اختصاص جلدية</span>
+
+                    <div class="share  fa-3x" style="color: #6495ED;">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="box">
-                <img src="image/dr.png" alt="">
-                <h3>أمجد الحموي</h3>
-                <span>اختصاص أمراض الدم</span>
-                <div class="share">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                    <a href="#" class="fab fa-linkedin"></a>
+
+            <div class="card" style="width: 18rem;">
+                <img src="image/dr.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">أمجد الحموي</h3>
+
+                    <span class="card-text">اختصاص أمراض الدم</span>
+
+                    <div class="share  fa-3x" style="color: #6495ED;">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
                 </div>
             </div>
+            <div class="card" style="width: 18rem;">
+                <img src="image/dr.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">آلاء قره جولي</h3>
 
-            <div class="box">
-                <img src="image/dr.png" alt="">
-                <h3>آلاء قره جولي</h3>
-                <span>اختصاص عظمية</span>
-                <div class="share">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                    <a href="#" class="fab fa-linkedin"></a>
+                    <span class="card-text">اختصاص عظمية</span>
+
+                    <div class="share  fa-3x" style="color: #6495ED;">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
                 </div>
             </div>
+            <div class="card" style="width: 18rem;">
+                <img src="image/dr.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">لين طعمة</h3>
 
-            <div class="box">
-                <img src="image/dr.png" alt="">
-                <h3>لين طعمة</h3>
-                <span>اختصاص عصبية</span>
-                <div class="share">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                    <a href="#" class="fab fa-linkedin"></a>
+                    <span class="card-text">اختصاص عصبية</span>
+
+                    <div class="share  fa-3x" style="color: #6495ED;">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
                 </div>
             </div>
+            <div class="card" style="width: 18rem;">
+                <img src="image/dr.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">عمار شنار</h3>
 
-            <div class="box">
-                <img src="image/dr.png" alt="">
-                <h3>عمار شنار</h3>
-                <span>اختصاص تجميل</span>
-                <div class="share">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                    <a href="#" class="fab fa-linkedin"></a>
+                    <span class="card-text">اختصاص تجميل</span>
+
+                    <div class="share  fa-3x" style="color: #6495ED;">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
                 </div>
             </div>
 
@@ -254,11 +339,48 @@
             <form method="post">
                 <fieldset>
                     <legend>موعد الحجز</legend>
-                    <input type="text" placeholder="اسمك" class="box">
-                    <input type="tel" placeholder="+9639******** : رقم هاتفك" pattern="[+]9639[0-9]{8}" class="box">
-                    <input type="email" placeholder="عنوان بريدك الإلكتروني" class="box">
-                    <input type="doctor" placeholder="اختصاص الطبيب المطلوب" class="box">
-                    <input type="date" class="box">
+                    <div class="container ">
+                        <div class="row">
+                            <div class="col">
+                                الاسم الثلاثي
+                            </div>
+                            <div class="col">
+                                <input type="text" placeholder="اسمك" class="box">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                رقم الجوال
+                            </div>
+                            <div class="col">
+                                <input type="tel" placeholder="+9639********" pattern="[+]9639[0-9]{8}" class="box">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                البريد الالكتروني
+                            </div>
+                            <div class="col">
+                                <input type="email" placeholder="عنوان بريدك الإلكتروني" class="box">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                اختصاص الطبيب المطلوب
+                            </div>
+                            <div class="col">
+                                <input type="doctor" placeholder="اختصاص الطبيب المطلوب" class="box">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                تاريخ الحجز
+                            </div>
+                            <div class="col">
+                                <input type="date" class="box">
+                            </div>
+                        </div>
+                    </div>
 
                     <input type="submit" value="احجز الآن" class="btn">
                 </fieldset>
@@ -280,7 +402,7 @@
             <div class="box">
                 <img src="image/dr.png" alt="">
                 <h3>محمد جوخدار</h3>
-                <div class="stars">
+                <div class="stars fa-2x" style="color: #fff;">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -293,7 +415,7 @@
             <div class="box">
                 <img src="image/dr.png" alt="">
                 <h3>فرح كركندي</h3>
-                <div class="stars">
+                <div class="stars  fa-2x" style="color: #fff;">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -307,7 +429,7 @@
             <div class="box">
                 <img src="image/dr.png" alt="">
                 <h3>عبير بوظان</h3>
-                <div class="stars">
+                <div class="stars  fa-2x" style="color: #fff;">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -426,19 +548,8 @@
         <div class="credit"> Created by <span>Lilas AL Araj</span> | www.almounkez.com </div>
 
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
 </body>
 
 </html>
